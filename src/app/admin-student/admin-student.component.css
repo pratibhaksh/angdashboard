@@ -1,0 +1,8 @@
+button.disabled {
+    color: gray;
+    cursor: not-allowed;
+    text-decoration: underline;
+}
+.text-success{
+    color:green;
+}

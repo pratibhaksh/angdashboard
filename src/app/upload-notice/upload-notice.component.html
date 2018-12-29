@@ -1,0 +1,52 @@
+<div class="row">
+    <div class="col-lg-12">
+      <section class="panel">
+        <header class="panel-heading">
+            Create Notice
+        </header>
+        <div class="panel-body">
+          <form [formGroup] = "uploadNotice" class="form-horizontal " >
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Title</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="title" 
+                formControlName="title">
+                <span *ngIf="title.touched && title.invalid" class="text-danger">
+                    Full name required</span>
+              </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Description</label>
+              <div class="col-sm-10">
+                
+                  <textarea formControlName="description" name="description" id="" class="form-control input-lg m-bot15"></textarea>
+                  <span *ngIf="description.touched && description.invalid" class="text-danger">
+                      Full name required</span>
+              </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-lg-2" for="inputSuccess">Class</label>
+                <div class="col-lg-10">
+                  <select class="form-control m-bot15" formControlName="class" 
+                  name="class">
+                      <option>Select Class</option>
+                      <option>0-2 years</option>
+                      <option>2-3</option>
+                      <option>3+</option>
+                    
+                  </select>
+                  <span *ngIf="class.touched && class.invalid" class="text-danger">
+                      Full name required</span>
+               </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-offset-5">
+                  <input type="submit"
+                   class="btn btn-success btn-lg" value="Submit" [disabled]="uploadNotice">
+                </div>
+              </div>
+           </form>
+        </div>
+      </section>
+    </div>
+</div>

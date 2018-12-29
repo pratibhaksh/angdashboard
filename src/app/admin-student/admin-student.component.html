@@ -1,0 +1,144 @@
+<div class="row">
+    <div class="col-lg-12">
+<section class="panel">
+<header class="panel-heading">
+    Students
+</header>
+<div class="panel-body">
+    <!-- <h1 class="text-success">pratibha{{test.length}} && {{4*9}}</h1>
+    <h1 [class]='test1'>Hi I m Great</h1>
+    <h1 class="text-danger" [class]='test1'>Hi I m Great</h1>
+    <h1  [class.text-danger]='test2'>boolean</h1>
+    <h1 [ngClass] = "messagemultiple">NgClass</h1>
+    <h1 [ngStyle] = "ngstyle">Style binding</h1>
+    <input type="text" value="pratibha"> -->
+    <button (click) = "greetint($event)">hi</button>
+    {{greetint1}}
+    <button (click) = "greetint1='hi i m great'">hi</button>
+<form [formGroup] = "admin" class="form-horizontal" (ngSubmit)="onsubmit()">
+    <div class="form-group">
+            <label class="col-sm-2 control-label">Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control"  
+                formControlName="fname" name="fname"
+               >
+            <span *ngIf="fname.touched && fname.invalid" class="text-danger">
+                Full name required</span>
+            </div>
+        </div>
+        <div class="form-group">
+                <label class="col-sm-2 control-label">Roll Number</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control"   
+                    formControlName="rn" name="rn">
+                    <span *ngIf="rn.touched && rn.invalid" class="text-danger">
+                        Text Cant Blanck</span>
+                </div>
+            </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Class</label>
+            <div class="col-sm-10">
+            
+                <select class="form-control input-lg m-bot15" 
+                 formControlName="class1" name="class1" 
+                >
+                    <option>Select Class</option>
+                    <option>0-2 years</option>
+                    <option>2-3 Years</option>
+                    <option>3+</option>
+                </select>
+                <span *ngIf="class1.touched && class1.invalid">
+                    Text Cant Blanck</span>
+            </div>
+        </div>
+      
+            <div class="form-group">
+                <label for="" class="col-sm-2 control-label">Gender</label>
+                <div class="col-sm-10">
+                    <div class="radio">
+                        <label> Male </label>
+                            <input type="radio"  
+                            id="optionsRadios1" value="Male"  
+                            name="gender" formControlName="gender">
+                            <span *ngIf="gender.touched && gender.invalid">
+                                Text Cant Blanck</span>
+                        
+                        </div>
+                        <div class="radio">
+                            <label> Female </label>
+                                <input type="radio" 
+                                id="optionsRadios1" value="Female" 
+                                 name="gender" formControlName="gender">
+                                 <span *ngIf="gender.touched && gender.invalid">
+                                    Text Cant Blanck</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                        <label class="col-sm-2 control-label">Parent Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control"  
+                            name="pname" formControlName="pname">
+                            <span *ngIf="pname.touched && pname.invalid">
+                                Text Cant Blanck</span>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                            <label class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" 
+                                name="email" formControlName="email">
+                                <span *ngIf="email.touched && email.invalid">
+                                    Text Cant Blanck</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                                <label class="col-sm-2 control-label">Mobile</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" 
+                                    name="mobile" formControlName="mobile">
+                                    <span *ngIf="mobile.touched && mobile.invalid">
+                                        Text Cant Blanck</span>
+                                </div>
+                            </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Image Upload</label>
+        <div class="col-sm-10">
+        
+            <input type="file" class="form-control input-lg m-bot15" 
+            name="pic" formControlName="pic">
+            <span *ngIf="pic.touched && pic.invalid">
+                Text Cant Blanck</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+            <label class="col-sm-2 control-label">Address</label>
+            <div class="col-sm-10">
+              
+                <textarea class="form-control input-lg m-bot15" name="" id="" 
+                cols="30" rows="10" name="address" formControlName="address">
+            </textarea>
+            <span *ngIf="address.touched && address.invalid">
+                Text Cant Blanck</span>
+            </div>
+        </div>
+
+<div class="form-group">
+    <div class="">
+      
+          <input type="submit"  
+          class="btn btn-primary btn-block" 
+          value="Register" (click)="onRegisterClick()">
+          <!-- [class.disabled]="admin.invalid" -->
+    </div>
+    </div>
+</form>
+</div>
+            
+          </section>
+          
+        </div>
+    </div>
+    
